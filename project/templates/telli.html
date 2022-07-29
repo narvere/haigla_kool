@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<h1>Telli</h1>
+
+{% for i in x %}
+
+<li>{{i.menu_title}} - {{i.menu_composition}} {{i.price}}"</li>
+
+{% endfor %}
+{% endblock %}

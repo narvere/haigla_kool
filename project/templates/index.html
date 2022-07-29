@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<h1>Tere maailm</h1>
+
+<h2>Narva haigla bufee admin panel</h2>
+
+
+
+
+
+<div class="list-group">
+    <a href="{{url_for('register') }}" class="list-group-item list-group-item-action">Добавить меню</a>
+    <a href="{{url_for('aruanne') }}" class="list-group-item list-group-item-action">Отчёт</a>
+  </div>
+    
+{% endblock %}

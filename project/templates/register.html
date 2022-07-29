@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>Menüü</h1>
+<form action="" method="post" class="form-contact">
+    <p><label>Название меню: </label><input type="text" name="menu_title" value="" required>
+    <p><label>Состав: </label><input type="text" name="menu_composition" value="" required>
+    <p><label>Цена: </label><input type="text" name="price" value="" required>
+
+    <p><input type="submit" value="register">
+</form>
+
+{% for i in x %}
+
+<li>{{i.menu_title}} - {{i.menu_composition}} {{i.price}}<a href="/update/{{ i.id }}"><img src="{{ edit_img }}"></a><a href="/delete/{{ i.id }}"><img
+        src="{{ delete_img }}"></a></li>
+
+{% endfor %}
+<a href="{{url_for('index') }}" class="btn btn-outline-danger">Главное меню</a>
+
+{% endblock %}
+
